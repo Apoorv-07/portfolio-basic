@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       META / SEO
+       Update title & description below for your own SEO needs.
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apoorv Singh | Portfolio</title>
+  <meta name="description" content="Portfolio of Apoorv Singh, an AI-ML undergraduate passionate about machine learning, RAG, computer vision and building intelligent systems that solve real-world problems." />
+  <meta name="author" content="Apoorv Singh" />
+
+  <!-- Open Graph tags for nicer link previews -->
+  <meta property="og:title" content="Apoorv Singh | Portfolio" />
+  <meta property="og:description" content="AI-ML undergraduate exploring how intelligent systems learn, adapt, and solve real-world problems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (place favicon.ico in the same folder / bucket root) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts: Space Grotesk + Plus Jakarta Sans + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Subtle tactile paper/film grain overlay (anti-AI-slop editorial finish) -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Architectural background grid with interactive cursor illumination -->
+  <div class="arch-bg" id="archBg" aria-hidden="true">
+    <div class="arch-grid"></div>
+    <div class="arch-spotlight" id="archSpotlight"></div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION BAR (sticky on scroll)
+       NOTE: Logo removed — menu is centered on desktop.
+  ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Hamburger for mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO / HOME SECTION
+       Editorial Warm-Carbon & Signal-Persimmon aesthetic +
+       Custom Industrial AI Robot Mascot.
+  ============================================================ -->
+  <section class="hero" id="home">
+    <!-- Subtle architectural registration marks -->
+    <div class="arch-markers" aria-hidden="true">
+      <span class="crosshair ch-tl">+</span>
+      <span class="crosshair ch-tr">+</span>
+      <span class="crosshair ch-bl">+</span>
+      <span class="crosshair ch-br">+</span>
+    </div>
+
+    <div class="container hero-grid">
+
+      <!-- ---------- LEFT: intro copy ---------- -->
+      <div class="hero-text reveal">
+        <p class="hero-greeting">
+          <span class="greeting-dot"></span>
+          <span class="mono-tag">INDEX // 01 — HELLO, I'M</span>
+        </p>
+
+        <h1 class="hero-name">Apoorv <em>Singh</em></h1>
+
+        <!-- Role text is typed out by script.js -->
+        <h2 class="hero-role">
+          <span class="role-prefix">&gt;</span>
+          <span id="roleText">AI-ML Undergraduate</span><span class="type-caret" aria-hidden="true"></span>
+        </h2>
+
+        <p class="hero-tagline">
+          An AI-ML undergrad with a keen interest in understanding how intelligent
+          systems learn, adapt, and solve real-world problems.
+        </p>
+
+        <!-- Quick credibility chips -->
+        <ul class="hero-stats">
+          <li><strong>9.26</strong><span>CGPA · VIT-AP</span></li>
+          <li><strong>AWS</strong><span>Certified SAA</span></li>
+          <li><strong>3&times;</strong><span>Hackathon Wins</span></li>
+        </ul>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Selected Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+
+        <!-- Social icon row -->
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/apoorv-singh-as07/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/Apoorv-07" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:apoorv.singh006@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- ---------- RIGHT: interactive Industrial AI robot ---------- -->
+      <div class="hero-image reveal">
+        <div class="robot-card" id="robotInteractive" role="button" tabindex="0"
+             aria-label="Interactive AI robot mascot. Activate to hear a new message.">
+
+          <!-- Hardware specification header bar -->
+          <div class="robot-card-top">
+            <div class="robot-status"><span class="status-dot"></span>UNIT AS-07 · ONLINE</div>
+            <span class="robot-serial">SYS // 2026</span>
+          </div>
+
+          <!-- Speech bubble -->
+          <div class="speech-bubble" id="robotSpeech" aria-live="polite">
+            <span class="speech-text" id="speechText">Hi there! I'm Apoorv's AI bot.</span>
+            <span class="speech-badge">Click or tap to interact</span>
+          </div>
+
+          <div class="robot-stage">
+            <svg class="robot-svg" viewBox="0 0 320 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated industrial AI robot waving its right arm">
+              <title>Animated industrial AI robot waving its right arm</title>
+              <defs>
+                <!-- Warm anodized titanium / sandstone casing gradients -->
+                <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#332E2A" />
+                  <stop offset="100%" stop-color="#1E1B18" />
+                </linearGradient>
+                <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3D3731" />
+                  <stop offset="100%" stop-color="#221F1C" />
+                </linearGradient>
+                <linearGradient id="visorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#0B0A09" />
+                  <stop offset="100%" stop-color="#171412" />
+                </linearGradient>
+                <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#FFF7ED" stop-opacity="1" />
+                  <stop offset="45%" stop-color="#FF5A26" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#E04819" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="platformGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#FF5A26" stop-opacity="0.45" />
+                  <stop offset="65%" stop-color="#E5A93C" stop-opacity="0.14" />
+                  <stop offset="100%" stop-color="#121110" stop-opacity="0" />
+                </radialGradient>
+                <filter id="neonGlow" x="-25%" y="-25%" width="150%" height="150%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <filter id="intenseGlow" x="-45%" y="-45%" width="190%" height="190%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+
+              <!-- ===== Industrial base dock ===== -->
+              <g class="robot-platform">
+                <ellipse cx="160" cy="340" rx="95" ry="22" fill="url(#platformGlow)" />
+                <ellipse cx="160" cy="340" rx="72" ry="15" fill="none" stroke="#FF5A26" stroke-width="1.4" stroke-dasharray="5,4" class="platform-ring" />
+                <ellipse cx="160" cy="340" rx="42" ry="9" fill="none" stroke="#E5A93C" stroke-width="1.1" opacity="0.65" />
+                <line x1="88"  y1="340" x2="88"  y2="326" stroke="#FF5A26" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+                <line x1="160" y1="348" x2="160" y2="332" stroke="#FF5A26" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+                <line x1="232" y1="340" x2="232" y2="326" stroke="#FF5A26" stroke-width="2" stroke-linecap="round" opacity="0.5" />
+              </g>
+
+              <!-- ===== Floating group (body + head + arms) ===== -->
+              <g class="robot-floating-group" id="robotFloatGroup">
+
+                <!-- Ground contact shadow -->
+                <ellipse cx="160" cy="310" rx="36" ry="7" fill="#070605" opacity="0.65" class="robot-shadow" />
+
+                <!-- ----- LEFT ARM (idle, subtle sway) ----- -->
+                <g class="robot-arm-left">
+                  <circle cx="92" cy="195" r="12" fill="#2C2723" stroke="#FF5A26" stroke-width="1.4" />
+                  <path d="M 92 195 L 84 240" stroke="url(#bodyGrad)" stroke-width="15" stroke-linecap="round" />
+                  <circle cx="84" cy="240" r="7.5" fill="#E5A93C" opacity="0.9" />
+                  <path d="M 84 240 L 86 272" stroke="url(#bodyGrad)" stroke-width="13" stroke-linecap="round" />
+                  <circle cx="86" cy="277" r="8.5" fill="#2C2723" stroke="#FF5A26" stroke-width="1.4" />
+                </g>
+
+                <!-- ----- TORSO ----- -->
+                <g class="robot-torso">
+                  <!-- Neck -->
+                  <rect x="144" y="160" width="32" height="20" rx="5" fill="#221F1C" stroke="#3D3731" stroke-width="1.5" />
+                  <line x1="148" y1="166" x2="172" y2="166" stroke="#FF5A26" stroke-width="1.4" opacity="0.7" />
+                  <line x1="148" y1="172" x2="172" y2="172" stroke="#E5A93C" stroke-width="1.4" opacity="0.6" />
+
+                  <!-- Chassis -->
+                  <rect x="102" y="174" width="116" height="106" rx="24" fill="url(#bodyGrad)" stroke="#4A423B" stroke-width="2" />
+                  <path d="M 108 194 L 126 194 L 134 208 L 186 208 L 194 194 L 212 194" fill="none" stroke="#4A423B" stroke-width="1.5" />
+                  <path d="M 114 262 L 206 262" stroke="#4A423B" stroke-width="1.5" />
+
+                  <!-- AI reactor core (Warm Signal Persimmon + Amber) -->
+                  <g class="robot-core" filter="url(#neonGlow)">
+                    <circle cx="160" cy="232" r="22" fill="#14110F" stroke="#FF5A26" stroke-width="1.8" />
+                    <circle cx="160" cy="232" r="15" fill="url(#coreGlow)" class="core-pulse" />
+                    <circle cx="160" cy="232" r="4.5" fill="#FFF7ED" />
+                  </g>
+                  <!-- Orbiting circuit nodes -->
+                  <g class="core-orbit">
+                    <circle cx="160" cy="210" r="2.2" fill="#FFB347" />
+                    <circle cx="182" cy="232" r="2.2" fill="#FF5A26" />
+                    <circle cx="160" cy="254" r="2.2" fill="#FFB347" />
+                    <circle cx="138" cy="232" r="2.2" fill="#FF5A26" />
+                  </g>
+
+                  <!-- Data readout bars -->
+                  <rect x="114" y="238" width="14" height="2.5" rx="1.2" fill="#FF5A26" opacity="0.85" class="data-bar db-1" />
+                  <rect x="114" y="244" width="9"  height="2.5" rx="1.2" fill="#E5A93C" opacity="0.65" class="data-bar db-2" />
+                  <rect x="192" y="238" width="14" height="2.5" rx="1.2" fill="#FF5A26" opacity="0.85" class="data-bar db-3" />
+                  <rect x="197" y="244" width="9"  height="2.5" rx="1.2" fill="#E5A93C" opacity="0.65" class="data-bar db-4" />
+                </g>
+
+                <!-- ----- HEAD (tilts toward cursor via JS) ----- -->
+                <g class="robot-head" id="robotHead">
+                  <!-- Antenna -->
+                  <line x1="160" y1="62" x2="160" y2="34" stroke="#4A423B" stroke-width="4" stroke-linecap="round" />
+                  <line x1="160" y1="62" x2="160" y2="36" stroke="#FF5A26" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="160" cy="28" r="7" fill="#FF5A26" filter="url(#intenseGlow)" class="antenna-light" />
+
+                  <!-- Broadcast arcs -->
+                  <path d="M 148 18 A 15 15 0 0 1 172 18" fill="none" stroke="#FF5A26" stroke-width="2"   stroke-linecap="round" class="signal-arc signal-arc-1" />
+                  <path d="M 140 10 A 24 24 0 0 1 180 10" fill="none" stroke="#E5A93C" stroke-width="1.5" stroke-linecap="round" class="signal-arc signal-arc-2" />
+
+                  <!-- Ear / audio sensors -->
+                  <rect x="82" y="94" width="14" height="36" rx="5" fill="#221F1C" stroke="#FF5A26" stroke-width="1.4" />
+                  <circle cx="89" cy="112" r="3.4" fill="#E5A93C" class="ear-led" />
+                  <rect x="224" y="94" width="14" height="36" rx="5" fill="#221F1C" stroke="#FF5A26" stroke-width="1.4" />
+                  <circle cx="231" cy="112" r="3.4" fill="#E5A93C" class="ear-led" />
+
+                  <!-- Helmet -->
+                  <rect x="92" y="62" width="136" height="102" rx="28" fill="url(#headGrad)" stroke="#4A423B" stroke-width="2.4" />
+
+                  <!-- Visor -->
+                  <rect x="106" y="76" width="108" height="72" rx="18" fill="url(#visorGrad)" stroke="#FF5A26" stroke-width="1.6" filter="url(#neonGlow)" />
+                  <path d="M 114 84 Q 160 80 206 84 Q 198 92 160 89 Q 122 92 114 84 Z" fill="#FFF7ED" opacity="0.12" />
+                  <!-- Scanline sweeping across the visor -->
+                  <rect x="106" y="80" width="108" height="3" fill="#FF5A26" opacity="0.22" class="visor-scan" />
+
+                  <!-- Left eye -->
+                  <g class="robot-eye" id="eyeLeft">
+                    <circle cx="136" cy="110" r="13" fill="#1C120E" />
+                    <circle id="pupilLeft" cx="136" cy="110" r="7.5" fill="#FF5A26" filter="url(#intenseGlow)" />
+                    <circle cx="134" cy="107" r="2.7" fill="#FFF7ED" />
+                  </g>
+
+                  <!-- Right eye -->
+                  <g class="robot-eye" id="eyeRight">
+                    <circle cx="184" cy="110" r="13" fill="#1C120E" />
+                    <circle id="pupilRight" cx="184" cy="110" r="7.5" fill="#FF5A26" filter="url(#intenseGlow)" />
+                    <circle cx="182" cy="107" r="2.7" fill="#FFF7ED" />
+                  </g>
+
+                  <!-- Mouth (path morphed by JS for different moods) -->
+                  <path id="robotMouth" d="M 148 132 Q 160 141 172 132" fill="none" stroke="#FFB347"
+                        stroke-width="3" stroke-linecap="round" filter="url(#neonGlow)" class="robot-mouth" />
+
+                  <!-- Cheek LEDs -->
+                  <circle cx="118" cy="129" r="3.4" fill="#FF5A26" opacity="0.45" class="robot-blush" />
+                  <circle cx="202" cy="129" r="3.4" fill="#FF5A26" opacity="0.45" class="robot-blush" />
+                </g>
+
+                <!-- ----- RIGHT ARM = THE WAVING ARM ----- -->
+                <!-- Rotation pivot is the shoulder joint at (228, 195) -->
+                <g class="robot-waving-arm-group" id="robotWavingArm">
+                  <circle cx="228" cy="195" r="12" fill="#2C2723" stroke="#FF5A26" stroke-width="1.4" />
+
+                  <path d="M 228 195 L 254 152" stroke="url(#bodyGrad)" stroke-width="15" stroke-linecap="round" />
+                  <circle cx="254" cy="152" r="8.5" fill="#FF5A26" stroke="#2C2723" stroke-width="2" />
+                  <path d="M 254 152 L 265 106" stroke="url(#bodyGrad)" stroke-width="13" stroke-linecap="round" />
+
+                  <circle cx="265" cy="104" r="9" fill="#2C2723" stroke="#FF5A26" stroke-width="1.6" />
+
+                  <!-- Open palm -->
+                  <circle cx="268" cy="94" r="11" fill="#221F1C" stroke="#FFB347" stroke-width="2" filter="url(#neonGlow)" />
+                  <path d="M 258 96 Q 250 92 248 85" fill="none" stroke="#FFB347" stroke-width="3.1" stroke-linecap="round" />
+                  <path d="M 264 84 Q 264 74 262 68" fill="none" stroke="#FFB347" stroke-width="3.1" stroke-linecap="round" />
+                  <path d="M 271 82 Q 273 72 273 64" fill="none" stroke="#FFB347" stroke-width="3.1" stroke-linecap="round" />
+                  <path d="M 278 86 Q 282 76 284 70" fill="none" stroke="#FFB347" stroke-width="3.1" stroke-linecap="round" />
+
+                  <!-- Motion arcs -->
+                  <g class="wave-lines">
+                    <path d="M 286 60 A 13 13 0 0 1 296 70" fill="none" stroke="#FF5A26" stroke-width="2"   stroke-linecap="round" opacity="0.85" />
+                    <path d="M 292 52 A 20 20 0 0 1 304 66" fill="none" stroke="#E5A93C" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+                  </g>
+                </g>
+
+                <!-- Ambient data sparkles -->
+                <g class="sparkles">
+                  <circle cx="68"  cy="144" r="2"   fill="#FF5A26" class="sparkle sp-1" />
+                  <circle cx="248" cy="46"  r="2.4" fill="#E5A93C" class="sparkle sp-2" />
+                  <circle cx="272" cy="214" r="2"   fill="#FFB347" class="sparkle sp-3" />
+                  <circle cx="58"  cy="262" r="2.4" fill="#FF5A26" class="sparkle sp-4" />
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Interactive action bar -->
+          <div class="robot-controls">
+            <button class="robot-btn" id="waveBtn" type="button" aria-label="Ask the robot to wave">
+              <span>Wave Back</span>
+            </button>
+            <button class="robot-btn robot-btn-secondary" id="talkBtn" type="button" aria-label="Talk to the robot">
+              <span>Talk to Me</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="hero-scroll" aria-label="Scroll to About section">
+      <span class="mouse"><span class="wheel"></span></span>
+      <span class="scroll-label">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       ABOUT ME SECTION
+  ============================================================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">01 // PROFILE</p>
+      <h2 class="section-title reveal">About <span>Me</span></h2>
+      <div class="about-content reveal">
+        <p>
+          Hey there! I'm an AI-ML undergrad with a keen interest in understanding how
+          intelligent systems learn, adapt, and solve real-world problems.
+        </p>
+        <p>
+          I'm passionate about exploring the full spectrum of AI — from core machine
+          learning concepts to practical applications in automation, data analysis, and
+          intelligent software. With a strong foundation in Python, Java, and AI tools,
+          I'm committed to growing as a creative and skilled developer.
+        </p>
+        <p>
+          Always open to learning, collaboration, and meaningful conversations around AI,
+          tech for good, and innovation. Let's connect and grow together!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+       Displayed as badges (no artificial percentages).
+  ============================================================ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">02 // CAPABILITIES</p>
+      <h2 class="section-title reveal">Technical <span>Toolkit</span></h2>
+
+      <!-- Core / featured skills -->
+      <h3 class="skills-subtitle reveal">Core Focus</h3>
+      <div class="skills-grid reveal">
+        <span class="skill-badge featured">Python</span>
+        <span class="skill-badge featured">Java</span>
+        <span class="skill-badge featured">AWS</span>
+        <span class="skill-badge featured">Retrieval-Augmented Generation (RAG)</span>
+        <span class="skill-badge featured">OpenCV</span>
+      </div>
+
+      <!-- Additional verified skills -->
+      <h3 class="skills-subtitle reveal">Additional Verified Skills</h3>
+      <div class="skills-grid reveal">
+        <span class="skill-badge">HTML</span>
+        <span class="skill-badge">Project Management</span>
+        <span class="skill-badge">Communication</span>
+        <span class="skill-badge">Amazon EC2</span>
+        <span class="skill-badge">Amazon RDS</span>
+        <span class="skill-badge">AWS Lambda</span>
+        <span class="skill-badge">Streamlit</span>
+        <span class="skill-badge">Express.js</span>
+        <span class="skill-badge">React.js</span>
+        <span class="skill-badge">Decision Trees</span>
+        <span class="skill-badge">Linear Regression</span>
+        <span class="skill-badge">MediaPipe</span>
+        <span class="skill-badge">Pandas</span>
+        <span class="skill-badge">NumPy</span>
+        <span class="skill-badge">Databases</span>
+        <span class="skill-badge">Team Leadership</span>
+        <span class="skill-badge">Technical Presentations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION SECTION (timeline)
+  ============================================================ -->
+  <section id="education" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">03 // ACADEMIC RECORD</p>
+      <h2 class="section-title reveal">My <span>Education</span></h2>
+
+      <div class="timeline">
+        <!-- Education item 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">September 2024 – September 2028</span>
+            <h3>Bachelor of Technology (BTech), Artificial Intelligence</h3>
+            <h4>VIT-AP University</h4>
+            <p class="timeline-grade">Grade: 9.26</p>
+          </div>
+        </div>
+
+        <!-- Education item 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">April 2022 – May 2024</span>
+            <h3>Intermediate, Science</h3>
+            <h4>City Montessori School, Lucknow</h4>
+            <p class="timeline-grade">Grade: 94%</p>
+          </div>
+        </div>
+
+        <!-- Education item 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">May 2020 – June 2022</span>
+            <h3>High School, Computer Science</h3>
+            <h4>City Montessori School, Lucknow</h4>
+            <p class="timeline-grade">Grade: 96.6%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION (Strictly 2 projects)
+  ============================================================ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">04 // SELECTED ENGINEERING</p>
+      <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-body">
+            <div class="project-meta">PROJECT // 01 · CLI &amp; SYSTEMS</div>
+            <h3 class="project-title">eSim Automated Tool Manager</h3>
+            <p class="project-desc">
+              A command-line tool that checks, reports, installs, and updates software
+              dependencies required by eSim — the open-source EDA suite developed by
+              FOSSEE, IIT Bombay. Submitted as a screening task for the FOSSEE eSim
+              Semester Long Internship (Autumn 2026), Task 5: Automated Tool Manager.
+            </p>
+            <ul class="project-highlights">
+              <li>Tool installation, update &amp; upgrade system</li>
+              <li>Configuration handling &amp; dependency checking</li>
+              <li>Cross-platform package managers: apt, dnf, yum, pacman, brew, winget, choco</li>
+              <li>69 tests, all passing</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>argparse</span>
+              <span>JSON Config</span>
+              <span>System Package Managers</span>
+            </div>
+            <a href="https://github.com/Apoorv-07/esim-automated-tool-manager" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-body">
+            <div class="project-meta">PROJECT // 02 · PRODUCTION WEB</div>
+            <h3 class="project-title">Ramora Realty Official Website</h3>
+            <p class="project-desc">
+              Official website for a Lucknow-based construction and real-estate business,
+              focused on construction, real estate, and consultation services.
+            </p>
+            <ul class="project-highlights">
+              <li>Live client-facing commercial platform</li>
+              <li>Structured showcase for construction, real estate &amp; consultation</li>
+              <li>Responsive architecture engineered for clarity and brand trust</li>
+            </ul>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="https://www.ramorarealty.com/" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+            <a href="https://github.com/Apoorv-07/ramora-realty-built-on-trust" target="_blank" rel="noopener" class="project-link project-link-secondary">Repository &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATIONS SECTION
+  ============================================================ -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">05 // CREDENTIALS &amp; HONORS</p>
+      <h2 class="section-title reveal">Certifications &amp; <span>Achievements</span></h2>
+
+      <!-- Featured / key certifications -->
+      <div class="cert-grid reveal">
+        <div class="cert-card featured">
+          <span class="cert-tag">CLOUD ARCHITECTURE</span>
+          <h3>AWS Certified Solutions Architect — Associate</h3>
+          <p class="cert-issuer">Amazon Web Services (AWS)</p>
+          <p class="cert-date">Issued Sep 2026 · Expires Sep 2029</p>
+        </div>
+        <div class="cert-card featured">
+          <span class="cert-tag">1ST PLACE WINNER</span>
+          <h3>1st Position @ Infinity Hackathon</h3>
+          <p class="cert-issuer">AI Based Productivity Tools Club — VIT AP</p>
+          <p class="cert-date">Issued Sep 2025</p>
+        </div>
+        <div class="cert-card featured">
+          <span class="cert-tag">1ST PLACE WINNER</span>
+          <h3>1st Place — Datathon 2K25</h3>
+          <p class="cert-issuer">Data Science Club VIT-AP</p>
+          <p class="cert-date">Issued Mar 2025</p>
+        </div>
+      </div>
+
+      <!-- Additional certifications / workshops -->
+      <h3 class="skills-subtitle reveal">More Certifications &amp; Workshops</h3>
+      <div class="cert-grid reveal">
+        <div class="cert-card">
+          <h3>InnovateX Hackathon</h3>
+          <p class="cert-issuer">Unstop</p>
+          <p class="cert-date">Nov 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>3rd Position @ The Byte and Mole Hackathon</h3>
+          <p class="cert-issuer">MLC</p>
+          <p class="cert-date">Oct 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>Ctrl+C Workshop</h3>
+          <p class="cert-issuer">Team Next Nexus VIT-AP</p>
+          <p class="cert-date">Aug 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>AlgoLaunch Workshop</h3>
+          <p class="cert-issuer">CSI Chapter VIT-AP</p>
+          <p class="cert-date">Aug 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>HackVerse</h3>
+          <p class="cert-issuer">Milestone Club VIT-AP</p>
+          <p class="cert-date">Apr 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>PY-PREP2.0</h3>
+          <p class="cert-issuer">Institution of Engineers of India, VIT AP</p>
+          <p class="cert-date">Dec 2024</p>
+        </div>
+        <div class="cert-card">
+          <h3>ThinkML Workshop</h3>
+          <p class="cert-issuer">Team Next Nexus VIT-AP</p>
+          <p class="cert-date">Apr 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>Eyes of AI: OpenCV, MediaPipe &amp; DeepFace</h3>
+          <p class="cert-issuer">AI Based Productivity Tools Club VIT AP</p>
+          <p class="cert-date">Feb 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>GoogleDevs Sprint 2K25</h3>
+          <p class="cert-issuer">Google Developer Groups, VIT-AP</p>
+          <p class="cert-date">Apr 2025</p>
+        </div>
+        <div class="cert-card">
+          <h3>GFG VIT-AP Hacktoberfest 2024</h3>
+          <p class="cert-issuer">Geeks For Geeks VIT AP Student Chapter</p>
+          <p class="cert-date">Nov 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">06 // INITIATE DIALOGUE</p>
+      <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+      <p class="contact-intro reveal">
+        I'm always open to learning, collaboration, and meaningful conversations. Feel free to reach out!
+      </p>
+
+      <div class="contact-grid reveal">
+        <a href="mailto:apoorv.singh006@gmail.com" class="contact-card">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">apoorv.singh006@gmail.com</span>
+        </a>
+        <a href="tel:+916390837000" class="contact-card">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91 6390837000</span>
+        </a>
+        <a href="https://www.linkedin.com/in/apoorv-singh-as07/" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">apoorv-singh-as07</span>
+        </a>
+        <a href="https://github.com/Apoorv-07" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">Apoorv-07</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <p>&copy; 2026 Apoorv Singh. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
